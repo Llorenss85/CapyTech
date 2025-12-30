@@ -111,9 +111,12 @@ main{
 
 @media (max-width: 600px){
     .seccion{
-        
+
     }
     .contenedor_nav{
-        min-width: 450px;
+        min-width: 320px;
+    }
+    .seccion{
+        max-width: 500px;
     }
 }
