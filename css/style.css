@@ -45,7 +45,7 @@ h3{
     border-bottom: 1px black solid;
     max-width: 800px;
     font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+    line-height: 1.9;
 
 }
 .estructura_first{
@@ -118,6 +118,7 @@ main{
 }
 .lista{
     font-size: var(--sizeText);
+    padding: 3px;
 }
 .carrusel{
     display: flex;
@@ -151,8 +152,8 @@ main{
     .seccion{
         min-width: 320px;
     }
-    .articulo_producto>p,.articulo_producto>h2 .articulo_producto>ul {
-        padding: 7px;
+    .articulo_producto>p,.articulo_producto>h2 {
+        padding: 3px;
     }
     .articulo_producto>img{
         max-width: 530px;
