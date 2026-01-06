@@ -34,7 +34,12 @@ h3{
 
 
 /* generales*/
-
+.activado{
+    display: block;
+}
+.apagado{
+    display: none;
+}
 .seccion{
 
     border-bottom: 1px black solid;
@@ -75,7 +80,10 @@ main{
 .seccion>h1{
     text-align: center;
 }
-
+.animar{
+    
+    animation: 0.3s ease-in  slide-in;
+}
 .articulo_producto>img{
     max-width: 730px;
 }
@@ -93,13 +101,16 @@ main{
 }
 .referido{
     display: flex;
-    gap: 10px;
+    gap: 10px 25px;
     justify-content: center;
     font-size: var(--sizeText);
+
 }
 .referido_icon{
     display: flex;
     gap: 10px;
+
+    
 }
 .referido_icon > img{
     width: 50px;
@@ -108,7 +119,25 @@ main{
 .lista{
     font-size: var(--sizeText);
 }
+.carrusel{
+    display: flex;
+    flex-direction: column;
+}
+.carrusel_enlace{
+    
+    font-size: var(--sizeText);
+    border-radius: 10px;
+}
 
+.carrusel_img>img{
+    width: 100%;
+}
+.carrusel_img> img:nth-child(1){
+    grid-column:1/2;
+}
+.carrusel_img> img:nth-child(2){
+    grid-column:2/3;
+}
 @media (max-width: 600px){
 
     .contenedor_nav{
@@ -122,11 +151,43 @@ main{
     .seccion{
         min-width: 320px;
     }
-    .articulo_producto>p,.articulo_producto>h2 {
+    .articulo_producto>p,.articulo_producto>h2 .articulo_producto>ul {
         padding: 7px;
     }
     .articulo_producto>img{
         max-width: 530px;
         
+    }
+}
+
+
+/*animation*/
+.jump{
+    
+    animation: 0.3s ease-in jump;
+}
+@keyframes slide-in{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.15;
+
+    }
+    55%{
+        opacity: 0.4;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes jump{
+    from{
+        scale: 1.17;
+
+    }
+    to{
+        scale: 1;
     }
 }
