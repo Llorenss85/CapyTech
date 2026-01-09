@@ -1,13 +1,19 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-   const carrusel= document.getElementById("carrusel_img").children
-   const carruselArray=Array.from(carrusel)
+   const carrusel= document.getElementsByClassName("rueda")
+
    const verMas = document.getElementById("verMas")
    const referido=document.getElementById("referido")
    //tengo los img, cambiar de estado en las clases apagado/animar
-   
-   cambiarImg(carruselArray)
+   const arrayCarru =Array.from(carrusel)
+   arrayCarruselImg(arrayCarru)
    clickEnVerMas(verMas,referido)
 })
+function arrayCarruselImg(unArray){
+   unArray.forEach(element => {
+      const carruselArray=Array.from(element.children)   
+      cambiarImg(carruselArray)
+   });
+}
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms)); // una promesa desde cero que indica correcto cuando pasa el tiempo argumentado. 
 }
